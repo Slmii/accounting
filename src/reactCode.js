@@ -15,20 +15,6 @@ import 'normalize.css/normalize.css';
 
 const store = configureStore();
 
-// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-// const today = new Date();
-// store.dispatch(addExpense({ description: 'Water bill', amount: 150, dateAdded: today.toLocaleDateString("nl-NL", options) }));
-// store.dispatch(addExpense({ description: 'Gas bill', amount: 75, dateAdded: today.toLocaleDateString("nl-NL", options) }));
-// store.dispatch(addExpense({ description: 'Rent', amount: 450, dateAdded: today.toLocaleDateString("nl-NL", options) }));
-// store.dispatch(setTextFilter('bill'));
-
-// LOOKING FOR CHANGES IN THE STORE
-
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
-
-
 // WITH PROVIDER THE WHOLE APPLICATION CAN USE THE STORE DATA
 const jsx = (
     <Provider store={store}>
