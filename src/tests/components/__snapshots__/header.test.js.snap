@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<nav
+  className="navbar sticky-top navbar-expand-md navbar-dark bg-dark"
+>
+  <Link
+    className="navbar-brand"
+    replace={false}
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+    to="/"
+  >
+    Home
+  </Link>
+  <button
+    aria-controls="collapsingNavbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    className="navbar-toggler navbar-toggler-right"
+    data-target="#collapsingNavbar"
+    data-toggle="collapse"
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    id="collapsingNavbar"
+  >
+    <ul
+      className="navbar-nav ml-auto"
+    >
+      <li
+        className="nav-item"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="nav-link"
+          to="/add"
+        >
+          Create
+        </NavLink>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="nav-link"
+          to="/account"
+        >
+          My Account
+        </NavLink>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="nav-link"
+          to="/about"
+        >
+          About
+        </NavLink>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          className="nav-link"
+          to="/help"
+        >
+          Help
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

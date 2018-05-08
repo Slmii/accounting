@@ -1,0 +1,30 @@
+// name with _name are partials (A PART OF APPLICATION)
+// Pixels are ignorant, don’t use them.
+// Use REMs for sizes and spacing.
+// Use EMs for media queries.
+
+html
+{
+    //font-size: 62.5%;
+}
+
+body 
+{
+    font-family: Helvetiva, Arial, sans-serif;
+    //font-size: $m-size;
+}
+
+button
+{
+    cursor: pointer;
+}
+
+button:disabled
+{
+    cursor: not-allowed;
+}
+
+.is-active
+{
+    color: #ffffff !important;
+}

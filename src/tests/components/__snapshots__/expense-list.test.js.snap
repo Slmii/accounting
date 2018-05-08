@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expense list with empty message 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-md-12"
+  >
+    <div
+      className="table-responsive"
+    >
+      <table
+        className="table table-hover table-sm"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              Description
+            </th>
+            <th
+              scope="col"
+            >
+              Amount
+            </th>
+            <th
+              scope="col"
+            >
+              Date Added
+            </th>
+            <th
+              scope="col"
+            >
+              Date Modified
+            </th>
+            <th
+              scope="col"
+            >
+              Date Expense
+            </th>
+            <th
+              scope="col"
+            >
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render expense list with expenses 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-md-12"
+  >
+    <div
+      className="table-responsive"
+    >
+      <table
+        className="table table-hover table-sm"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              Description
+            </th>
+            <th
+              scope="col"
+            >
+              Amount
+            </th>
+            <th
+              scope="col"
+            >
+              Date Added
+            </th>
+            <th
+              scope="col"
+            >
+              Date Modified
+            </th>
+            <th
+              scope="col"
+            >
+              Date Expense
+            </th>
+            <th
+              scope="col"
+            >
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <Connect(ExpenseListItem)
+            amount={299.95}
+            attachment={Array []}
+            dateAdded={0}
+            dateExpense={1200}
+            dateModified={50000}
+            description="Water Bill"
+            id="1"
+            key="1"
+            note="this is payed last week"
+          />
+          <Connect(ExpenseListItem)
+            amount={12.65}
+            attachment={Array []}
+            dateAdded={-345600000}
+            dateExpense={1200}
+            dateModified={2000}
+            description="Rent Bill"
+            id="2"
+            key="2"
+            note="this is payed 3 months ago"
+          />
+          <Connect(ExpenseListItem)
+            amount={1.99}
+            attachment={
+              Array [
+                "receipt.png",
+                "paper.png",
+              ]
+            }
+            dateAdded={345600000}
+            dateExpense={1200}
+            dateModified={0}
+            description="ice cream"
+            id="3"
+            key="3"
+            note="vanilla ice cream"
+          />
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

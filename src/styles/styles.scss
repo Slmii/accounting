@@ -1,0 +1,8 @@
+// YOU CAN IMPORT PARTIALS STLES TO THIS MAIN ONE (READABILITY,SCALABILITY)
+
+@import './base/settings';
+@import './base/base';
+
+.DateInput_input {
+    height: 38px;
+}

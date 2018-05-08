@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expense list item 1`] = `
+<tr>
+  <td
+    className="align-middle"
+  >
+    Water Bill
+  </td>
+  <td
+    className="align-middle"
+  >
+    299.95
+  </td>
+  <td
+    className="align-middle"
+  >
+    01-01-1970
+  </td>
+  <td
+    className="align-middle"
+  >
+    01-01-1970
+  </td>
+  <td
+    className="align-middle"
+  >
+    01-01-1970
+  </td>
+  <td>
+    <Link
+      replace={false}
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      to="/edit/1"
+    >
+      <button
+        className="btn btn-primary"
+      >
+        <i
+          className="fas fa-edit"
+        />
+      </button>
+    </Link>
+     
+    <button
+      className="btn btn-danger"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-trash-alt"
+      />
+    </button>
+  </td>
+</tr>
+`;
