@@ -8,13 +8,16 @@
     "server": "live-server public/",
     "dev": "webpack-dev-server --mode development",
     "prod": "webpack -p --env production",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run prod"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
     "live-server": "^1.2.0",
     "moment": "^2.22.1",
     "npm": "^5.8.0",
