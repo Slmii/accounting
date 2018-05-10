@@ -5,7 +5,6 @@ import { Redirect } from 'react-router';
 import moment from 'moment';
 import { SingleDatePicker} from 'react-dates';
 import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
 
 const now = moment();
 
