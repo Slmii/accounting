@@ -5,6 +5,7 @@ import Add          from '../components/add';
 import Home         from '../components/home';
 import Edit         from '../components/edit';
 import Header       from '../components/header';
+import Footer       from '../components/footer';
 import Help         from '../components/help';
 import NotFound     from '../components/404';
 
@@ -20,6 +21,7 @@ const AppRouter = () => (
                 <Route path="/help" component={Help} />
                 <Route component={NotFound} />
             </Switch>
+            <Footer />
         </div>
     </BrowserRouter>
 );
