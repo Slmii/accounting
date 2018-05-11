@@ -14,7 +14,7 @@ module.exports = (env) => {
 		entry: './src/reactCode.js',
 		// WHERE TO PUT THE FILE
 		output: {
-			path: path.join(__dirname, 'public'),
+			path: path.join(__dirname, 'public', 'dist'),
 			filename: 'bundle.js'
 		},
 		cache: true,
@@ -48,16 +48,18 @@ module.exports = (env) => {
 				})
 			}]
 		},
+		plugins: [
+			new ExtractTextPlugin('styles.css')
+		],
 		// TYPE OF SOURCEMAP TO EHNACE THE DEBUGGING
 		devtool: isProduction ? 'source-map' : 'inline-source-map',
 		// ALWAYS GETS THE PUBLIC FOLDER WITH THE JS AND INDEX.HTML FILES LOCATED. THIS AUTOMATICALLY RUNS THE INDEX.HTML FILE
 		devServer: {
 			contentBase: path.join(__dirname, 'public'),
 			// TELLS THE SERVER THAT WE WILL HANDLE ROUTING VIA CLIENT SIDE
-			historyApiFallback: true
-		},
-		plugins: [
-			new ExtractTextPlugin('styles.css')
-		]
+			historyApiFallback: true,
+			// THE PATH OF THE ASSESTS (BUNDLE)
+			publicPath: '/dist/'
+		}		
 	};
 };
