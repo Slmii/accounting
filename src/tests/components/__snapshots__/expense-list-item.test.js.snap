@@ -22,11 +22,6 @@ exports[`should render expense list item 1`] = `
   >
     01-01-1970
   </td>
-  <td
-    className="align-middle"
-  >
-    01-01-1970
-  </td>
   <td>
     <Link
       replace={false}

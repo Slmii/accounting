@@ -1,4 +1,4 @@
-import selectExpenses from '../../selectors/expenses';
+import { getVisibleExpenses } from '../../selectors/expenses';
 import { 
     sortByAmount, 
     sortByDate
@@ -13,7 +13,7 @@ test('should filter by text value', () => {
         startDate: undefined,
         endDate: undefined
     };
-    const result = selectExpenses(expenses, filters);
+    const result = getVisibleExpenses(expenses, filters);
     // SHOULD ONLY SHOW THE FIRST AND SECOND OBJECT IN THE EXPENSES ARRAY
     // BECAUSE THE TEXT FILTER IS SET ON 'BILL'
     // ALSO NOTE THAT THE ORDER SHOULD BE CORRECT BECAUSE WE SET 'SORTBY' NEWEST DATE FIRST
@@ -27,7 +27,7 @@ test('should filter by startDate', () => {
         startDate:  moment(0),
         endDate: undefined
     };
-    const result = selectExpenses(expenses, filters);
+    const result = getVisibleExpenses(expenses, filters);
     // SHOULD ONLY SHOW THE FIRST AND SECOND OBJECT IN THE EXPENSES ARRAY
     // BECAUSE THE TEXT FILTER IS SET ON 'BILL'
     // ALSO NOTE THAT THE ORDER SHOULD BE CORRECT BECAUSE WE SET 'SORTBY' NEWEST DATE FIRST
@@ -41,7 +41,7 @@ test('should filter by endDate', () => {
         startDate: undefined,
         endDate: moment(0).add(2, 'days')
     };
-    const result = selectExpenses(expenses, filters);
+    const result = getVisibleExpenses(expenses, filters);
     // SHOULD ONLY SHOW THE FIRST AND SECOND OBJECT IN THE EXPENSES ARRAY
     // BECAUSE THE TEXT FILTER IS SET ON 'BILL'
     // ALSO NOTE THAT THE ORDER SHOULD BE CORRECT BECAUSE WE SET 'SORTBY' NEWEST DATE FIRST
@@ -55,7 +55,7 @@ test('should filter by endDate', () => {
 //         startDate: undefined,
 //         endDate: undefined
 //     };
-//     const result = selectExpenses(expenses, filters);
+//     const result = getVisibleExpenses(expenses, filters);
 //     expect(result).toEqual([ expenses[0], expenses[1], expenses[2] ]);
 // });
 
@@ -66,6 +66,6 @@ test('this will sorty by date', () =>{
         startDate: undefined,
         endDate: undefined
     };
-    const result = selectExpenses(expenses, filters);
+    const result = getVisibleExpenses(expenses, filters);
     expect(result).toEqual([ expenses[1], expenses[0], expenses[2] ]);
 });

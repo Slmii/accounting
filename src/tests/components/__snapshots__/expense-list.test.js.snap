@@ -33,11 +33,6 @@ exports[`should render expense list with empty message 1`] = `
             <th
               scope="col"
             >
-              Date Modified
-            </th>
-            <th
-              scope="col"
-            >
               Date Expense
             </th>
             <th
@@ -47,8 +42,20 @@ exports[`should render expense list with empty message 1`] = `
             </th>
           </tr>
         </thead>
-        <tbody />
+        <tbody>
+          <tr>
+            <td
+              className="text-center"
+              colSpan="5"
+            >
+              No expenses
+            </td>
+          </tr>
+        </tbody>
       </table>
+      <table
+        className="table table-borderless table-sm borderless"
+      />
     </div>
   </div>
 </div>
@@ -87,11 +94,6 @@ exports[`should render expense list with expenses 1`] = `
             <th
               scope="col"
             >
-              Date Modified
-            </th>
-            <th
-              scope="col"
-            >
               Date Expense
             </th>
             <th
@@ -105,6 +107,7 @@ exports[`should render expense list with expenses 1`] = `
           <Connect(ExpenseListItem)
             amount={299.95}
             attachment={Array []}
+            currency="euro"
             dateAdded={0}
             dateExpense={1200}
             dateModified={50000}
@@ -116,6 +119,7 @@ exports[`should render expense list with expenses 1`] = `
           <Connect(ExpenseListItem)
             amount={12.65}
             attachment={Array []}
+            currency="euro"
             dateAdded={-345600000}
             dateExpense={1200}
             dateModified={2000}
@@ -132,6 +136,7 @@ exports[`should render expense list with expenses 1`] = `
                 "paper.png",
               ]
             }
+            currency="dollar"
             dateAdded={345600000}
             dateExpense={1200}
             dateModified={0}
@@ -140,6 +145,56 @@ exports[`should render expense list with expenses 1`] = `
             key="3"
             note="vanilla ice cream"
           />
+        </tbody>
+      </table>
+      <table
+        className="table table-borderless table-sm borderless"
+      >
+        <tbody>
+          <tr>
+            <td
+              colSpan="2"
+              style={
+                Object {
+                  "width": "75%",
+                }
+              }
+            />
+            <td
+              className="text-right"
+            >
+              <b>
+                Total:
+              </b>
+            </td>
+            <td
+              className="text-right"
+            >
+              3
+            </td>
+          </tr>
+          <tr>
+            <td
+              colSpan="2"
+              style={
+                Object {
+                  "width": "75%",
+                }
+              }
+            />
+            <td
+              className="text-right"
+            >
+              <b>
+                Total amount:
+              </b>
+            </td>
+            <td
+              className="text-right"
+            >
+              314.59
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

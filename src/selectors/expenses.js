@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 // GET VISIBLE EXPENSES. THE ARGUMENT PASSED DOWN ARE ALL THE EXPENSES AND FILTERS
-const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
+export const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
     // ONLY RETURN THE EXPENSES WHO MATCH THE STATEMENTS
     return expenses.filter((expense) => {
         // IF DATE ADDED SORTING IS SELECTED 
@@ -68,4 +68,12 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
     });        
 };
 
-export default getVisibleExpenses;
+export const getExpensesTotalAmount = (expenses) => {
+    return expenses
+    .map((expense) => expense.amount)
+    .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+export const getExpensesTotalCount = (expenses) => {
+    return expenses.length;
+}

@@ -24,39 +24,39 @@ test('this will edit an expense', () => {
     });
 });
 
-test('this will add an expense with provided values', () => {
-    const expenseData = {
-        amount: 250,
-        attachment: "cool.png",
-        dateAdded: "10000",
-        dateExpense: "15000",
-        dateModified: "500000",
-        description: "test edit expense",
-        note: "this is a note for adding a new expense"
-    };
-    const action = addExpense(expenseData);
-    expect(action).toEqual({
-        type: 'ADD_EXPENSE',
-        expense: {
-            ...expenseData,
-            id: expect.any(String)
-        }
-    });
-});
+// test('this will add an expense with provided values', () => {
+//     const expenseData = {
+//         amount: 250,
+//         attachment: "cool.png",
+//         dateAdded: "10000",
+//         dateExpense: "15000",
+//         dateModified: "500000",
+//         description: "test edit expense",
+//         note: "this is a note for adding a new expense"
+//     };
+//     const action = addExpense(expenseData);
+//     expect(action).toEqual({
+//         type: 'ADD_EXPENSE',
+//         expense: {
+//             ...expenseData,
+//             id: expect.any(String)
+//         }
+//     });
+// });
 
-test('this will add an expense without provided values', () => {
-    const action = addExpense();
-    expect(action).toEqual({
-        type: 'ADD_EXPENSE',
-        expense: {
-            id: expect.any(String),
-            amount: 0,
-            attachment: "",
-            dateAdded: 0,
-            dateExpense: 0,
-            dateModified: 0,
-            description: "",
-            note: ""
-        }
-    });
-});
+// test('this will add an expense without provided values', () => {
+//     const action = addExpense();
+//     expect(action).toEqual({
+//         type: 'ADD_EXPENSE',
+//         expense: {
+//             id: expect.any(String),
+//             amount: 0,
+//             attachment: "",
+//             dateAdded: 0,
+//             dateExpense: 0,
+//             dateModified: 0,
+//             description: "",
+//             note: ""
+//         }
+//     });
+// });

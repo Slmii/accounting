@@ -3,6 +3,7 @@ import moment from 'moment';
 export default  [{
     id: '1',
     amount: 299.95,
+    currency: 'euro',
     dateAdded: 0,
     dateExpense: 1200,
     dateModified: 50000,
@@ -13,6 +14,7 @@ export default  [{
 {
     id: '2',
     amount: 12.65,
+    currency: 'euro',
     dateAdded: moment(0).subtract(4, 'days').valueOf(),
     dateExpense: 1200,
     dateModified: 2000,
@@ -23,6 +25,7 @@ export default  [{
 {
     id: '3',
     amount: 1.99,
+    currency: 'dollar',
     dateAdded: moment(0).add(4, 'days').valueOf(),
     dateExpense: 1200,
     dateModified: 0,
