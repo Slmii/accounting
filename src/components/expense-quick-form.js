@@ -14,6 +14,7 @@ export default class ExpenseForm extends React.Component {
     state = {
         description: '',
         amount: '',
+        currency: 'euro',
         dateAdded: now,
         dateExpense: now,
         calendarFocused: false,
@@ -39,6 +40,13 @@ export default class ExpenseForm extends React.Component {
                 amount: amount
             }));
         }
+    };
+
+    onCurrencyChange = (e) => {
+        const currency = e.target.value;
+        this.setState(() => ({
+            currency: currency
+        }));
     };
 
     onDateChange = (dateExpense) => {
@@ -96,9 +104,10 @@ export default class ExpenseForm extends React.Component {
         
         if (this.state.description && this.state.amount)
         {
-            this.setState(() => ({
+            this.setState((prevState) => ({
                 description: '',
                 amount: '',
+                currency: prevState.currency,
                 dateAdded: now,
                 calendarFocused: false,
                 invalidDescription: 'form-control',
@@ -109,6 +118,7 @@ export default class ExpenseForm extends React.Component {
             this.props.onSubmit({
                 description: this.state.description,
                 amount: parseFloat(this.state.amount, 10),
+                currency: this.state.currency,
                 dateAdded: this.state.dateAdded.valueOf(),
                 dateExpense: this.state.dateExpense.valueOf()
             });
@@ -123,9 +133,18 @@ export default class ExpenseForm extends React.Component {
                     <div className="col-md-3 col-lg-3">
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
-                                <label style={{color: "#ffffff", borderColor: this.state.selectedTypeBackgroundColor, backgroundColor: this.state.selectedTypeBackgroundColor}} className="input-group-text" htmlFor="income-expense"><i className={this.state.selectedTypeGlyph}></i></label>
+                                <span style={{color: "#ffffff", borderColor: this.state.selectedTypeBackgroundColor, backgroundColor: this.state.selectedTypeBackgroundColor}} 
+                                    className="input-group-text" 
+                                    htmlFor="income-expense"
+                                >
+                                    <i className={this.state.selectedTypeGlyph}></i>
+                                </span>
                             </div>
-                            <select style={{borderColor: this.state.selectedTypeBackgroundColor}} className="custom-select" id="income-expense" onChange={this.onSelectChange}>
+                            <select style={{borderColor: this.state.selectedTypeBackgroundColor}} 
+                                className="custom-select" 
+                                id="income-expense" 
+                                onChange={this.onSelectChange}
+                            >
                                 <option value="income">Income</option>
                                 <option value="expense">Expense</option>
                             </select>
@@ -147,9 +166,16 @@ export default class ExpenseForm extends React.Component {
                         </div>
                     </div>
                     <div className="col-md-3 col-lg-3">
-                        <div className="input-group mb-3">
+                        <div className="input-group mb-3">                            
                             <div className="input-group-prepend">
-                                <span className="input-group-text">€ / $</span>
+                                <select 
+                                    className="custom-select" 
+                                    id="currency-type"
+                                    onChange={this.onCurrencyChange}
+                                >
+                                    <option value="euro">€</option>
+                                    <option value="dollar">$</option>
+                                </select>
                             </div>
                             <input 
                                 type="text" 

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { removeExpense } from '../actions/expenses';
 import { Link } from 'react-router-dom';
 
-export const ExpenseListItem = ({ dispatch, id, description, amount, dateAdded, dateModified, dateExpense }) => (    
+export const ExpenseListItem = ({ dispatch, id, description, amount, currency, dateAdded, dateModified, dateExpense }) => (    
     <tr>
         <td className="align-middle">{description}</td>
         <td className="align-middle">{numeral(amount).format('0,0.00')}</td>
