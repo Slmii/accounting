@@ -13,7 +13,6 @@ export const ExpenseList = (props) => (
                             <th scope="col">Description</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Date Added</th>
-                            <th scope="col">Date Modified</th>
                             <th scope="col">Date Expense</th>
                             <th scope="col">Actions</th>
                         </tr>
